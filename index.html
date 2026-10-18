@@ -559,10 +559,11 @@
             padding-bottom: 20px;
         }
 
-        .comprovante-header img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
+        .comprovante-header .inter-logo-comp {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ff7a00;
+            letter-spacing: -1px;
         }
 
         .comprovante-header h3 {
@@ -870,7 +871,7 @@
         </div>
         <div class="content" style="padding: 20px;">
             <div class="comprovante-header">
-                <img src="https://logodownload.org/wp-content/uploads/2019/06/banco-inter-logo-3.png" alt="Inter">
+                <div class="inter-logo-comp">inter</div>
                 <h3>Pix enviado</h3>
                 <div class="valor-comp" id="comp-valor">R\$ 999,99</div>
             </div>
@@ -880,15 +881,15 @@
                 <div class="bloco-detalhes">
                     <div class="detalhe-item">
                         <span>Data do pagamento</span>
-                        <span>domingo, 18/10/2026</span>
+                        <span id="comp-data">domingo, 18/10/2026</span>
                     </div>
                     <div class="detalhe-item">
                         <span>Horário</span>
-                        <span>17:45</span>
+                        <span id="comp-horario">17:45</span>
                     </div>
                     <div class="detalhe-item">
                         <span>ID da transação</span>
-                        <span style="font-size: 11px; color: #aaa;">c0475e7-0511-4694-b53af180736d1c81</span>
+                        <span style="font-size: 11px; color: #aaa;" id="comp-id">c0475e7-0511-4694-b53af180736d1c81</span>
                     </div>
                 </div>
             </div>
@@ -1195,6 +1196,23 @@
             setTimeout(() => {
                 let valorFloat = (parseInt(digitosDigitadosPix) || 0) / 100;
                 let valorFormatadoStr = formatarMoeda(valorFloat);
+
+                // Capturar horário atual dinamicamente
+                let agora = new Date();
+                let horas = String(agora.getHours()).padStart(2, '0');
+                let minutos = String(agora.getMinutes()).padStart(2, '0');
+                let dia = String(agora.getDate()).padStart(2, '0');
+                let mes = String(agora.getMonth() + 1).padStart(2, '0');
+                let ano = agora.getFullYear();
+                let diasSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+                let diaSemanaStr = diasSemana[agora.getDay()];
+
+                document.getElementById('comp-data').innerText = `${diaSemanaStr}, ${dia}/${mes}/${ano}`;
+                document.getElementById('comp-horario').innerText = `${horas}:${minutos}`;
+
+                // ID aleatório realista para o comprovante
+                let idTransacao = 'c' + Math.random().toString(16).substring(2, 9) + '-' + Math.random().toString(16).substring(2, 6) + '-' + Math.random().toString(16).substring(2, 6) + '-' + Math.random().toString(16).substring(2, 6) + '-' + Math.random().toString(16).substring(2, 18);
+                document.getElementById('comp-id').innerText = idTransacao;
 
                 document.getElementById('comp-valor').innerText = "R\$ " + valorFormatadoStr;
                 document.getElementById('comp-nome-rec').innerText = dadosUsuario.destinatarioNome;
