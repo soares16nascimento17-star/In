@@ -45,30 +45,12 @@
             }
         }
 
-        /* Status Bar */
-        .status-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px 10px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            background: #121212;
-            z-index: 100;
-        }
-
-        .status-bar .icons {
-            display: flex;
-            gap: 8px;
-            font-size: 13px;
-        }
-
-        /* Header Home */
+        /* App Header */
         .app-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 15px 20px 10px 20px;
             background: #121212;
         }
 
@@ -79,34 +61,18 @@
         }
 
         .profile-avatar {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #ff7a00;
             cursor: pointer;
         }
 
-        .pergunte-btn {
-            background-color: #2a2a2a;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #ddd;
-            cursor: pointer;
-        }
-
-        .pergunte-btn i {
-            color: #ff7a00;
-        }
-
         .header-icons {
             display: flex;
-            gap: 18px;
-            font-size: 18px;
+            gap: 20px;
+            font-size: 20px;
             color: #ccc;
             cursor: pointer;
         }
@@ -124,7 +90,7 @@
 
         /* Saldo Section */
         .saldo-section {
-            padding: 15px 20px;
+            padding: 10px 20px 15px 20px;
         }
 
         .saldo-label {
@@ -143,11 +109,12 @@
             font-size: 26px;
             font-weight: 700;
             letter-spacing: -0.5px;
+            cursor: pointer;
         }
 
         .saldo-actions {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             font-size: 18px;
             color: #aaa;
             cursor: pointer;
@@ -157,7 +124,7 @@
         .quick-menu {
             display: flex;
             gap: 12px;
-            padding: 10px 20px;
+            padding: 5px 20px 15px 20px;
             overflow-x: auto;
         }
 
@@ -168,7 +135,7 @@
         .quick-item {
             background-color: #1e1e1e;
             padding: 12px 18px;
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -176,11 +143,12 @@
             font-weight: 500;
             white-space: nowrap;
             cursor: pointer;
-            transition: background 0.2s;
+            border: 1px solid #2a2a2a;
         }
 
-        .quick-item:active {
-            background-color: #333;
+        .quick-item svg {
+            width: 16px;
+            height: 16px;
         }
 
         .quick-item i {
@@ -193,13 +161,13 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
-            padding: 15px 20px;
+            padding: 0 20px 15px 20px;
         }
 
         .grid-card {
             background-color: #1e1e1e;
-            border-radius: 12px;
-            padding: 14px 10px;
+            border-radius: 14px;
+            padding: 16px 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -208,17 +176,18 @@
             color: #ccc;
             text-align: center;
             cursor: pointer;
+            border: 1px solid #2a2a2a;
         }
 
-        .grid-card i {
-            font-size: 20px;
-            color: #fff;
+        .grid-card svg {
+            width: 22px;
+            height: 22px;
         }
 
         /* Banner Card */
         .banner-card {
             background: linear-gradient(135deg, #3d1c14 0%, #201311 100%);
-            margin: 15px 20px;
+            margin: 10px 20px 15px 20px;
             border-radius: 16px;
             padding: 18px;
             border: 1px solid #52251a;
@@ -227,10 +196,10 @@
         }
 
         .banner-card h3 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            margin-bottom: 8px;
-            line-height: 1.3;
+            margin-bottom: 12px;
+            line-height: 1.4;
             max-width: 65%;
         }
 
@@ -243,7 +212,6 @@
             font-weight: 600;
             font-size: 13px;
             cursor: pointer;
-            margin-top: 10px;
         }
 
         .banner-card img.card-img {
@@ -251,6 +219,7 @@
             right: -10px;
             bottom: -15px;
             width: 130px;
+            opacity: 0.2;
         }
 
         /* Widgets Section */
@@ -266,12 +235,13 @@
             border-radius: 14px;
             padding: 15px;
             cursor: pointer;
+            border: 1px solid #2a2a2a;
         }
 
         .widget-box .w-title {
             font-size: 13px;
             color: #aaa;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .widget-box .w-content {
@@ -280,14 +250,13 @@
             gap: 10px;
         }
 
-        .widget-box img, .widget-box i {
-            font-size: 24px;
-            width: 32px;
-            color: #ff7a00;
+        .widget-box svg {
+            width: 24px;
+            height: 24px;
         }
 
         .widget-box .w-value {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
         }
 
@@ -376,7 +345,7 @@
 
         .pix-option-btn {
             background-color: #1e1e1e;
-            border: none;
+            border: 1px solid #2a2a2a;
             padding: 16px;
             border-radius: 12px;
             color: #fff;
@@ -401,8 +370,9 @@
 
         .pix-icon-item {
             background-color: #1e1e1e;
+            border: 1px solid #2a2a2a;
             border-radius: 12px;
-            padding: 12px 6px;
+            padding: 14px 6px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -459,13 +429,6 @@
         }
 
         /* Pagamento Pix Flow */
-        .pagar-container {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
         .input-group {
             display: flex;
             flex-direction: column;
@@ -528,13 +491,14 @@
         }
 
         .valor-input-box .display-valor {
-            font-size: 36px;
+            font-size: 34px;
             font-weight: 700;
             color: #ff7a00;
             border-bottom: 2px solid #ff7a00;
             display: inline-block;
             padding-bottom: 5px;
-            min-width: 150px;
+            max-width: 100%;
+            word-break: break-all;
         }
 
         .valor-input-box .fav-nome {
@@ -555,7 +519,7 @@
 
         .key-btn {
             background-color: #1e1e1e;
-            border: none;
+            border: 1px solid #2a2a2a;
             border-radius: 10px;
             padding: 14px;
             font-size: 20px;
@@ -573,6 +537,7 @@
 
         .key-btn.action {
             background-color: #ff7a00;
+            border-color: #ff7a00;
             color: #fff;
         }
 
@@ -595,8 +560,9 @@
         }
 
         .comprovante-header img {
-            width: 36px;
-            height: 36px;
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
         }
 
         .comprovante-header h3 {
@@ -616,6 +582,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            border: 1px solid #2a2a2a;
         }
 
         .detalhe-item {
@@ -652,23 +619,10 @@
 
     <!-- HOME SCREEN -->
     <div id="home-screen" class="screen active" style="position: relative;">
-        <!-- Status Bar -->
-        <div class="status-bar">
-            <span id="relogio-topo">17:45</span>
-            <div class="icons">
-                <i class="fa-solid fa-signal"></i>
-                <i class="fa-solid fa-wifi"></i>
-                <i class="fa-solid fa-battery-full"></i>
-            </div>
-        </div>
-
         <!-- App Header -->
         <div class="app-header">
             <div class="profile-area">
                 <img id="avatar-home" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" class="profile-avatar" onclick="abrirTela('config-screen')">
-                <div class="pergunte-btn">
-                    <i class="fa-solid fa-plus"></i> Pergunte a <span id="nome-remetente-display">Tavin</span>
-                </div>
             </div>
             <div class="header-icons">
                 <i class="fa-regular fa-circle-question" onclick="abrirTela('config-screen')" title="Configurações"></i>
@@ -681,9 +635,8 @@
             <div class="saldo-section">
                 <div class="saldo-label">Saldo</div>
                 <div class="saldo-row">
-                    <div class="saldo-valor" id="saldo-texto">R\$ 0,03</div>
+                    <div class="saldo-valor" id="saldo-texto" onclick="abrirModalSaldo()" title="Clique para alterar o saldo">R$ 7.676.040,49</div>
                     <div class="saldo-actions">
-                        <i class="fa-solid fa-pen" style="font-size: 14px; cursor: pointer;" onclick="abrirModalSaldo()" title="Alterar Saldo"></i>
                         <i class="fa-solid fa-chevron-right" style="font-size: 14px;"></i>
                     </div>
                 </div>
@@ -692,32 +645,32 @@
             <!-- Quick Menu -->
             <div class="quick-menu">
                 <div class="quick-item" onclick="abrirTela('pix-screen')">
-                    <i class="fa-solid fa-pix"></i> Pix
+                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.5l6.5 6.5L12 18.5 5.5 12 12 5.5z"/></svg> Pix
                 </div>
                 <div class="quick-item" onclick="abrirTela('pix-screen')">
-                    <i class="fa-solid fa-barcode"></i> Pagar
+                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M2 4h20v2H2V4zm2 4h16v12H4V8zm2 2v8h12v-8H6z"/></svg> Pagar
                 </div>
                 <div class="quick-item" onclick="alert('Funcionalidade de Cartões')">
-                    <i class="fa-regular fa-credit-card"></i> Cartões
+                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zm-2-6H6v-2h12v2z"/></svg> Cartões
                 </div>
             </div>
 
             <!-- Grid Menu -->
             <div class="grid-menu">
                 <div class="grid-card" onclick="alert('Poupança')">
-                    <i class="fa-solid fa-piggy-bank" style="color:#ff7a00"></i>
+                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M20 8h-3V6c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6h6v2H9V6zm11 14H4V10h16v10z"/></svg>
                     <span>Poupança</span>
                 </div>
                 <div class="grid-card" onclick="alert('Recargas')">
-                    <i class="fa-solid fa-mobile-screen" style="color:#ff7a00"></i>
+                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
                     <span>Recargas</span>
                 </div>
                 <div class="grid-card" onclick="abrirTela('pix-screen')">
-                    <i class="fa-solid fa-arrow-right-arrow-left" style="color:#ff7a00"></i>
+                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/></svg>
                     <span>Transferir</span>
                 </div>
                 <div class="grid-card" onclick="alert('Gift Card')">
-                    <i class="fa-solid fa-gift" style="color:#ff7a00"></i>
+                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.33 8.66 11.5 12 7.5l3.34 4L17 10.33 14.92 8H20v6z"/></svg>
                     <span>Gift Card</span>
                 </div>
             </div>
@@ -726,22 +679,22 @@
             <div class="banner-card">
                 <h3>Ser Inter One é estar à frente com benefícios personalizados!</h3>
                 <button class="banner-btn" onclick="alert('Detalhes do Ser Inter One')">Eu quero</button>
-                <img src="https://logodownload.org/wp-content/uploads/2019/06/banco-inter-logo-3.png" class="card-img" alt="Cartão Inter" style="opacity: 0.2; width: 100px;">
+                <img src="https://logodownload.org/wp-content/uploads/2019/06/banco-inter-logo-3.png" class="card-img" alt="Cartão Inter">
             </div>
 
             <!-- Widgets -->
             <div class="widgets-row">
-                <div class="widget-box" onclick="alert('Meu Porquinho')">
+                <div class="widget-box" onclick="abrirModalPorquinho()">
                     <div class="w-title">Meu Porquinho</div>
                     <div class="w-content">
-                        <i class="fa-solid fa-piggy-bank"></i>
-                        <div class="w-value">R\$ 192,60</div>
+                        <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M19 9.5V8c0-1.1-.9-2-2-2h-3V4c0-.55-.45-1-1-1s-1 .45-1 1v2H9V4c0-.55-.45-1-1-1s-1 .45-1 1v2H4c-1.1 0-2 .9-2 2v1.5c0 .83.67 1.5 1.5 1.5H4v7c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-7h.5c.83 0 1.5-.67 1.5-1.5zM17 18H7v-6h10v6z"/></svg>
+                        <div class="w-value" id="porquinho-texto">R\$ 192,60</div>
                     </div>
                 </div>
                 <div class="widget-box" onclick="alert('Pontos Loop')">
                     <div class="w-title">Pontos Loop</div>
                     <div class="w-content">
-                        <i class="fa-solid fa-circle-dot"></i>
+                        <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
                         <div class="w-value" style="font-size: 13px;">Acumule pontos</div>
                     </div>
                 </div>
@@ -842,7 +795,7 @@
                 <button class="key-btn" onclick="digitarValor('7')">7</button>
                 <button class="key-btn" onclick="digitarValor('8')">8</button>
                 <button class="key-btn" onclick="digitarValor('9')">9</button>
-                <button class="key-btn" onclick="digitarValor('00')">00</button>
+                <button class="key-btn" onclick="apagarValor()"><i class="fa-solid fa-delete-left"></i></button>
                 <button class="key-btn" onclick="digitarValor('0')">0</button>
                 <button class="key-btn action" onclick="proximoRevisaoPix()"><i class="fa-solid fa-check"></i></button>
             </div>
@@ -900,7 +853,7 @@
     </div>
 
 
-    <!-- AUTENTICANDO / LOADING PIX -->
+    <!-- LOADING PIX -->
     <div id="loading-screen" class="screen" style="justify-content: center; align-items: center; text-align: center; padding: 30px;">
         <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 40px; color: #ff7a00; margin-bottom: 20px;"></i>
         <h3 id="loading-text" style="font-size: 16px; margin-bottom: 6px;">Processando o Pix</h3>
@@ -997,7 +950,8 @@
         <div class="content" style="padding: 20px;">
             <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                 <img id="avatar-preview" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-                <button class="banner-btn" onclick="mudarFotoPerfil()">Alterar Foto</button>
+                <input type="file" id="input-galeria-foto" accept="image/*" style="display: none;" onchange="carregarFotoGaleria(event)">
+                <button class="banner-btn" onclick="document.getElementById('input-galeria-foto').click()">Escolher da Galeria</button>
             </div>
 
             <div class="input-group" style="margin-bottom: 15px;">
@@ -1043,10 +997,10 @@
     <!-- MODAL ALTERAR SALDO -->
     <div id="modal-saldo" class="screen" style="background: rgba(0,0,0,0.85); justify-content: center; align-items: center; padding: 20px; z-index: 500;">
         <div style="background-color: #1e1e1e; width: 100%; max-width: 350px; border-radius: 16px; padding: 20px; border: 1px solid #333;">
-            <h3 style="margin-bottom: 15px; font-size: 16px;">Alterar Saldo</h3>
+            <h3 style="margin-bottom: 15px; font-size: 16px;">Alterar Saldo em Conta</h3>
             <div class="input-group" style="margin-bottom: 15px;">
-                <label>Novo valor:</label>
-                <input type="text" id="input-novo-saldo" value="7.675.040,50">
+                <label>Novo valor (ex: 7675040,50):</label>
+                <input type="text" id="input-novo-saldo" value="7.676.040,49">
             </div>
             <div style="display: flex; gap: 10px;">
                 <button class="btn-laranja" style="background-color: #333;" onclick="fecharModalSaldo()">Cancelar</button>
@@ -1055,13 +1009,29 @@
         </div>
     </div>
 
+
+    <!-- MODAL ALTERAR PORQUINHO -->
+    <div id="modal-porquinho" class="screen" style="background: rgba(0,0,0,0.85); justify-content: center; align-items: center; padding: 20px; z-index: 500;">
+        <div style="background-color: #1e1e1e; width: 100%; max-width: 350px; border-radius: 16px; padding: 20px; border: 1px solid #333;">
+            <h3 style="margin-bottom: 15px; font-size: 16px;">Alterar Saldo do Porquinho</h3>
+            <div class="input-group" style="margin-bottom: 15px;">
+                <label>Novo valor (ex: 192,60):</label>
+                <input type="text" id="input-novo-porquinho" value="192,60">
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-laranja" style="background-color: #333;" onclick="fecharModalPorquinho()">Cancelar</button>
+                <button class="btn-laranja" onclick="confirmarNovoPorquinho()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <script>
-    // Estado global da aplicação
     let historicoTelas = ['home-screen'];
-    let saldoAtual = "R\$ 7.676.040,49";
-    let valorDigitadoPix = "999,99";
+    let saldoNumerico = 7676040.49;
+    let porquinhoNumerico = 192.60;
+    let digitosDigitadosPix = "0";
     let dadosUsuario = {
         nomeRemetente: "Tavin",
         cpfRemetente: "77777788",
@@ -1073,9 +1043,18 @@
         destinatarioChave: "***765*****"
     };
 
+    function formatarMoeda(valor) {
+        return valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function atualizarDisplayPix() {
+        let valorFloat = (parseInt(digitosDigitadosPix) || 0) / 100;
+        document.getElementById('input-display-valor').innerText = formatarMoeda(valorFloat);
+    }
+
     function abrirTela(idTela) {
         document.querySelectorAll('.screen').forEach(s => {
-            if(s.id !== 'modal-saldo') s.classList.remove('active');
+            if(!s.id.startsWith('modal-')) s.classList.remove('active');
         });
         document.getElementById(idTela).classList.add('active');
         historicoTelas.push(idTela);
@@ -1086,7 +1065,7 @@
             historicoTelas.pop();
             let telaAnterior = historicoTelas[historicoTelas.length - 1];
             document.querySelectorAll('.screen').forEach(s => {
-                if(s.id !== 'modal-saldo') s.classList.remove('active');
+                if(!s.id.startsWith('modal-')) s.classList.remove('active');
             });
             document.getElementById(telaAnterior).classList.add('active');
         }
@@ -1095,8 +1074,8 @@
     function alternarVisibilidadeSaldo() {
         const el = document.getElementById('saldo-texto');
         const icone = document.getElementById('toggle-saldo');
-        if(el.innerText === "••••••") {
-            el.innerText = saldoAtual;
+        if(el.innerText.includes("•")) {
+            el.innerText = "R$ " + formatarMoeda(saldoNumerico);
             icone.className = "fa-regular fa-eye";
         } else {
             el.innerText = "••••••";
@@ -1105,6 +1084,7 @@
     }
 
     function abrirModalSaldo() {
+        document.getElementById('input-novo-saldo').value = formatarMoeda(saldoNumerico);
         document.getElementById('modal-saldo').style.display = 'flex';
     }
 
@@ -1113,19 +1093,44 @@
     }
 
     function confirmarNovoSaldo() {
-        let novo = document.getElementById('input-novo-saldo').value;
-        saldoAtual = "R\$ " + novo;
-        document.getElementById('saldo-texto').innerText = saldoAtual;
-        document.getElementById('saldo-disponivel-valor').innerText = saldoAtual;
+        let textoVal = document.getElementById('input-novo-saldo').value.replace(/\./g, '').replace(',', '.');
+        let num = parseFloat(textoVal);
+        if(!isNaN(num)) {
+            saldoNumerico = num;
+            document.getElementById('saldo-texto').innerText = "R\$ " + formatarMoeda(saldoNumerico);
+        }
         fecharModalSaldo();
     }
 
-    function mudarFotoPerfil() {
-        let novaUrl = prompt("Cole o link da nova foto de perfil (URL da imagem):", dadosUsuario.avatarUrl);
-        if(novaUrl) {
-            dadosUsuario.avatarUrl = novaUrl;
-            document.getElementById('avatar-home').src = novaUrl;
-            document.getElementById('avatar-preview').src = novaUrl;
+    function abrirModalPorquinho() {
+        document.getElementById('input-novo-porquinho').value = formatarMoeda(porquinhoNumerico);
+        document.getElementById('modal-porquinho').style.display = 'flex';
+    }
+
+    function fecharModalPorquinho() {
+        document.getElementById('modal-porquinho').style.display = 'none';
+    }
+
+    function confirmarNovoPorquinho() {
+        let textoVal = document.getElementById('input-novo-porquinho').value.replace(/\./g, '').replace(',', '.');
+        let num = parseFloat(textoVal);
+        if(!isNaN(num)) {
+            porquinhoNumerico = num;
+            document.getElementById('porquinho-texto').innerText = "R\$ " + formatarMoeda(porquinhoNumerico);
+        }
+        fecharModalPorquinho();
+    }
+
+    function carregarFotoGaleria(event) {
+        const arquivo = event.target.files[0];
+        if (arquivo) {
+            const leitor = new FileReader();
+            leitor.onload = function(e) {
+                dadosUsuario.avatarUrl = e.target.result;
+                document.getElementById('avatar-home').src = e.target.result;
+                document.getElementById('avatar-preview').src = e.target.result;
+            }
+            leitor.readAsDataURL(arquivo);
         }
     }
 
@@ -1138,34 +1143,47 @@
         dadosUsuario.destinatarioInst = document.getElementById('cfg-dest-inst').value;
         dadosUsuario.destinatarioChave = document.getElementById('cfg-dest-chave').value;
 
-        document.getElementById('nome-remetente-display').innerText = dadosUsuario.nomeRemetente;
         alert('Configurações salvas com sucesso!');
         abrirTela('home-screen');
     }
 
     function iniciarFluxoPix() {
-        document.getElementById('nome-fav-display').innerText = `Pagar para ${dadosUsuario.destinatarioNome}...`;
         document.getElementById('titulo-pagar-para').innerText = `Pagar para ${dadosUsuario.destinatarioNome}`;
+        document.getElementById('nome-fav-display').innerText = `Pagar para ${dadosUsuario.destinatarioNome}...`;
+        digitosDigitadosPix = "0";
+        atualizarDisplayPix();
         abrirTela('valor-screen');
     }
 
     function digitarValor(num) {
-        if(valorDigitadoPix === "0,00") {
-            valorDigitadoPix = num;
+        if (digitosDigitadosPix === "0") {
+            digitosDigitadosPix = num;
         } else {
-            valorDigitadoPix += num;
+            digitosDigitadosPix += num;
         }
-        document.getElementById('input-display-valor').innerText = valorDigitadoPix;
+        atualizarDisplayPix();
+    }
+
+    function apagarValor() {
+        if (digitosDigitadosPix.length > 1) {
+            digitosDigitadosPix = digitosDigitadosPix.slice(0, -1);
+        } else {
+            digitosDigitadosPix = "0";
+        }
+        atualizarDisplayPix();
     }
 
     function proximoRevisaoPix() {
-        document.getElementById('revisao-valor-topo').innerText = "R\$ " + valorDigitadoPix;
+        let valorFloat = (parseInt(digitosDigitadosPix) || 0) / 100;
+        let valorFormatadoStr = formatarMoeda(valorFloat);
+
+        document.getElementById('revisao-valor-topo').innerText = "R\$ " + valorFormatadoStr;
         document.getElementById('revisao-nome-topo').innerText = dadosUsuario.destinatarioNome;
         document.getElementById('rev-nome-rec').innerText = dadosUsuario.destinatarioNome;
         document.getElementById('rev-cpf-rec').innerText = dadosUsuario.destinatarioCpf;
         document.getElementById('rev-inst-rec').innerText = dadosUsuario.destinatarioInst;
         document.getElementById('rev-chave-rec').innerText = dadosUsuario.destinatarioChave;
-        document.getElementById('btn-pagar-final').innerText = `Pagar R$ ${valorDigitadoPix}`;
+        document.getElementById('btn-pagar-final').innerText = `Pagar R$ ${valorFormatadoStr}`;
         abrirTela('revisao-screen');
     }
 
@@ -1175,8 +1193,10 @@
         setTimeout(() => {
             document.getElementById('loading-text').innerText = "Processando o Pix";
             setTimeout(() => {
-                // Atualizar dados no comprovante
-                document.getElementById('comp-valor').innerText = "R\$ " + valorDigitadoPix;
+                let valorFloat = (parseInt(digitosDigitadosPix) || 0) / 100;
+                let valorFormatadoStr = formatarMoeda(valorFloat);
+
+                document.getElementById('comp-valor').innerText = "R\$ " + valorFormatadoStr;
                 document.getElementById('comp-nome-rec').innerText = dadosUsuario.destinatarioNome;
                 document.getElementById('comp-cpf-rec').innerText = dadosUsuario.destinatarioCpf;
                 document.getElementById('comp-inst-rec').innerText = dadosUsuario.destinatarioInst;
