@@ -45,7 +45,6 @@
             }
         }
 
-        /* App Header */
         .app-header {
             display: flex;
             justify-content: space-between;
@@ -78,7 +77,6 @@
             align-items: center;
         }
 
-        /* Main Scrollable Content */
         .content {
             flex: 1;
             overflow-y: auto;
@@ -89,7 +87,6 @@
             display: none;
         }
 
-        /* Saldo Section */
         .saldo-section {
             padding: 10px 20px 15px 20px;
         }
@@ -121,7 +118,6 @@
             cursor: pointer;
         }
 
-        /* Quick Menu Bar */
         .quick-menu {
             display: flex;
             gap: 12px;
@@ -135,7 +131,7 @@
 
         .quick-item {
             background-color: #1e1e1e;
-            padding: 10px 16px;
+            padding: 10px 18px;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -151,9 +147,9 @@
             width: 18px;
             height: 18px;
             flex-shrink: 0;
+            fill: #ff7a00;
         }
 
-        /* Secondary Grid Menu */
         .grid-menu {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -180,9 +176,9 @@
             width: 24px;
             height: 24px;
             flex-shrink: 0;
+            fill: #ff7a00;
         }
 
-        /* Banner Card */
         .banner-card {
             background: linear-gradient(135deg, #3d1c14 0%, #201311 100%);
             margin: 10px 20px 15px 20px;
@@ -220,7 +216,6 @@
             opacity: 0.2;
         }
 
-        /* Widgets Section */
         .widgets-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -252,6 +247,7 @@
             width: 24px;
             height: 24px;
             flex-shrink: 0;
+            fill: #ff7a00;
         }
 
         .widget-box .w-value {
@@ -259,7 +255,6 @@
             font-weight: 700;
         }
 
-        /* Bottom Nav */
         .bottom-nav {
             position: absolute;
             bottom: 0;
@@ -289,13 +284,17 @@
             color: #ff7a00;
         }
 
+        .nav-item.active svg {
+            fill: #ff7a00;
+        }
+
         .nav-item svg {
             width: 22px;
             height: 22px;
             flex-shrink: 0;
+            fill: #888;
         }
 
-        /* Screens Management */
         .screen {
             display: none;
             flex-direction: column;
@@ -313,7 +312,6 @@
             display: flex;
         }
 
-        /* Internal Screen Header */
         .screen-header {
             display: flex;
             align-items: center;
@@ -336,7 +334,6 @@
             cursor: pointer;
         }
 
-        /* Pix Screen Styles */
         .pix-menu-list {
             padding: 15px 20px;
             display: flex;
@@ -424,7 +421,6 @@
             cursor: pointer;
         }
 
-        /* Pagamento Pix Flow */
         .input-group {
             display: flex;
             flex-direction: column;
@@ -464,7 +460,6 @@
             margin-top: 10px;
         }
 
-        /* Valor Input Screen */
         .valor-screen-content {
             display: flex;
             flex-direction: column;
@@ -503,7 +498,6 @@
             color: #ccc;
         }
 
-        /* Numeric Keyboard */
         .custom-keyboard {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -537,7 +531,6 @@
             color: #fff;
         }
 
-        /* Comprovante Screen */
         .comprovante-header {
             text-align: center;
             display: flex;
@@ -609,12 +602,10 @@
 
     <!-- HOME SCREEN -->
     <div id="home-screen" class="screen active" style="position: relative;">
-        <!-- App Header -->
         <div class="app-header">
             <div class="profile-area">
                 <img id="avatar-home" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" class="profile-avatar" onclick="abrirTela('config-screen')">
             </div>
-            <!-- Botão "Pergunte à Seven" idêntico ao vídeo -->
             <div style="background-color: #1e1e1e; border: 1px solid #333; padding: 6px 14px; border-radius: 20px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #fff; cursor: pointer;" onclick="alert('Pergunte à Seven')">
                 <div style="background-color: #ff7a00; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #fff;"><i class="fa-solid fa-plus"></i></div>
                 <span>Pergunte à Seven</span>
@@ -625,7 +616,6 @@
         </div>
 
         <div class="content">
-            <!-- Saldo Section -->
             <div class="saldo-section">
                 <div class="saldo-label">Saldo</div>
                 <div class="saldo-row">
@@ -636,86 +626,83 @@
                 </div>
             </div>
 
-            <!-- Quick Menu com Ícones Oficiais idênticos ao Vídeo -->
+            <!-- Quick Menu -->
             <div class="quick-menu">
                 <div class="quick-item" onclick="abrirTela('pix-screen')">
-                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.5l6.5 6.5L12 18.5 5.5 12 12 5.5z"/></svg> Pix
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.5l6.5 6.5L12 18.5 5.5 12 12 5.5z"/></svg> Pix
                 </div>
                 <div class="quick-item" onclick="abrirTela('pix-screen')">
-                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M2 4h20v2H2V4zm2 4h16v12H4V8zm2 2v8h12v-8H6z"/></svg> Pagar
+                    <svg viewBox="0 0 24 24"><path d="M2 4h20v2H2V4zm2 4h16v12H4V8zm2 2v8h12v-8H6z"/></svg> Pagar
                 </div>
                 <div class="quick-item" onclick="alert('Funcionalidade de Cartões')">
-                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> Cartões
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> Cartões
                 </div>
             </div>
 
-            <!-- Secondary Grid Menu idêntico ao Vídeo -->
+            <!-- Secondary Grid Menu -->
             <div class="grid-menu">
                 <div class="grid-card" onclick="alert('Poupança')">
-                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"/></svg>
                     <span>Poupança</span>
                 </div>
                 <div class="grid-card" onclick="alert('Recargas')">
-                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
                     <span>Recargas</span>
                 </div>
                 <div class="grid-card" onclick="abrirTela('pix-screen')">
-                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/></svg>
                     <span>Transferir</span>
                 </div>
                 <div class="grid-card" onclick="alert('Gift Card')">
-                    <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.33 8.66 11.5 12 7.5l3.34 4L17 10.33 14.92 8H20v6z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.33 8.66 11.5 12 7.5l3.34 4L17 10.33 14.92 8H20v6z"/></svg>
                     <span>Gift Card</span>
                 </div>
             </div>
 
-            <!-- Banner Principal -->
             <div class="banner-card">
                 <h3>Ser Inter One é estar à frente com benefícios personalizados!</h3>
                 <button class="banner-btn" onclick="alert('Detalhes do Ser Inter One')">Eu quero</button>
                 <img src="https://logodownload.org/wp-content/uploads/2019/06/banco-inter-logo-3.png" class="card-img" alt="Cartão Inter">
             </div>
 
-            <!-- Widgets -->
             <div class="widgets-row">
                 <div class="widget-box" onclick="abrirModalPorquinho()">
                     <div class="w-title">Meu Porquinho</div>
                     <div class="w-content">
-                        <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M19 10.5C19 6.36 15.42 3 11 3S3 6.36 3 10.5c0 2.22 1.02 4.22 2.62 5.61L5 19l3.12-1.04C9.17 18.3 10.05 18.5 11 18.5c4.42 0 8-3.36 8-7.5zM8.5 10c-.83 0-1.5-.67-1.5-1.5S7.67 7 8.5 7s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm5 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M19 10.5C19 6.36 15.42 3 11 3S3 6.36 3 10.5c0 2.22 1.02 4.22 2.62 5.61L5 19l3.12-1.04C9.17 18.3 10.05 18.5 11 18.5c4.42 0 8-3.36 8-7.5zM8.5 10c-.83 0-1.5-.67-1.5-1.5S7.67 7 8.5 7s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm5 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
                         <div class="w-value" id="porquinho-texto">R\$ 192,60</div>
                     </div>
                 </div>
                 <div class="widget-box" onclick="alert('Pontos Loop')">
                     <div class="w-title">Pontos Loop</div>
                     <div class="w-content">
-                        <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
                         <div class="w-value" style="font-size: 13px;">Acumule pontos</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Bottom Nav idêntico ao Vídeo (Início, Forum, Shop, Invest) -->
+        <!-- Bottom Nav -->
         <div class="bottom-nav">
             <button class="nav-item active">
-                <svg viewBox="0 0 24 24" fill="#ff7a00"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                 <span>Início</span>
             </button>
             <button class="nav-item" onclick="alert('Forum')">
-                <svg viewBox="0 0 24 24" fill="#888"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
                 <span>Forum</span>
             </button>
             <button class="nav-item" onclick="alert('Shop')">
-                <svg viewBox="0 0 24 24" fill="#888"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 15H4V8h16v11z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 15H4V8h16v11z"/></svg>
                 <span>Shop</span>
             </button>
             <button class="nav-item" onclick="abrirTela('config-screen')">
-                <svg viewBox="0 0 24 24" fill="#888"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
                 <span>Invest</span>
             </button>
         </div>
     </div>
-
 
     <!-- PIX MENU SCREEN -->
     <div id="pix-screen" class="screen">
@@ -764,7 +751,6 @@
         </div>
     </div>
 
-
     <!-- DIGITACAO DE VALOR PIX -->
     <div id="valor-screen" class="screen">
         <div class="screen-header">
@@ -795,7 +781,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- REVISAO PIX -->
     <div id="revisao-screen" class="screen">
@@ -846,14 +831,12 @@
         </div>
     </div>
 
-
     <!-- LOADING PIX -->
     <div id="loading-screen" class="screen" style="justify-content: center; align-items: center; text-align: center; padding: 30px;">
         <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 40px; color: #ff7a00; margin-bottom: 20px;"></i>
         <h3 id="loading-text" style="font-size: 16px; margin-bottom: 6px;">Processando o Pix</h3>
         <p style="font-size: 13px; color: #888;">Aguarde enquanto a transação é processada.</p>
     </div>
-
 
     <!-- COMPROVANTE PIX -->
     <div id="comprovante-screen" class="screen">
@@ -936,7 +919,6 @@
         </div>
     </div>
 
-
     <!-- CONFIGURACOES DE PERFIL E DADOS -->
     <div id="config-screen" class="screen">
         <div class="screen-header">
@@ -990,7 +972,6 @@
         </div>
     </div>
 
-
     <!-- MODAL ALTERAR SALDO -->
     <div id="modal-saldo" class="screen" style="background: rgba(0,0,0,0.85); justify-content: center; align-items: center; padding: 20px; z-index: 500;">
         <div style="background-color: #1e1e1e; width: 100%; max-width: 350px; border-radius: 16px; padding: 20px; border: 1px solid #333;">
@@ -1005,7 +986,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- MODAL ALTERAR PORQUINHO -->
     <div id="modal-porquinho" class="screen" style="background: rgba(0,0,0,0.85); justify-content: center; align-items: center; padding: 20px; z-index: 500;">
